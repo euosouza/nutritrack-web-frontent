@@ -1,40 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Documentação de Desenvolvimento - NutriTrack
 
-## Getting Started
+## Visão Geral
 
-First, run the development server:
+O NutriTrack é uma aplicação voltada para o acompanhamento nutricional, permitindo aos usuários monitorar suas refeições,
+definir metas e acompanhar seu progresso através de dashboards e relatórios.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Link da aplicação em produção
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Link:** https://euosouza.github.io/nutritrack-web-frontent/
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Estrutura da Aplicação
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+A aplicação está dividida nos seguintes módulos principais:
 
-## Learn More
+### 1. Autenticação
 
-To learn more about Next.js, take a look at the following resources:
+  - Login: Autenticação via e-mail/senha, Google e redes sociais.
+  - Cadastro: Registro de novos usuários com informações pessoais e preferências nutricionais.
+  - Recuperação de senha: Envio de link para redefinição de senha via e-mail.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 2. Onboarding
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Esta etapa inicial ajuda o usuário a configurar seu perfil.
 
-## Deploy on Vercel
+  - Coleta de dados: Perguntas sobre idade, peso, altura e objetivos.
+  - Sugestão de metas: Cálculo automático de objetivos de calorias e macros.
+  - Tour pela aplicação: Demonstração interativa das funcionalidades.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 3. Configurações
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+#### Conta:
 
-## Deploy
+  - Tema (modo claro/escuro).
+  - Idioma (português, inglês, espanhol).
+  - Unidade de medidas (métrico/imperial).
+  - Gerenciar assinatura (upgrade para versão premium).
+  - Notificações (personalização de alertas diários).
 
-Link: https://euosouza.github.io/nutritrack-web-frontent/
+#### Privacidade:
+
+  - Política e privacidade.
+  - Termos de uso.
+  - Autorização de compartilhamento de dados.
+
+### 4. Dashboard
+
+Visão geral do progresso do usuário, incluindo metas e indicadores.
+
+  - Resumo do dia: Calorias consumidas, gasto calórico e progresso das metas.
+  - Gráficos: Evolução do peso e distribuição de macronutrientes.
+  - Dicas personalizadas: Sugestões de melhoria com base no histórico.
+
+### 5. Perfil
+
+  - Informações básicas: Nome, idade, sexo, peso, altura.
+  - Metas: Definição de objetivos de ganho ou perda de peso.
+  - Medidas corporais: Registro de medidas para acompanhar progresso.
+
+### 6. Alimentação
+
+#### Diário alimentar:
+
+  - Registro de refeições e calorias consumidas.
+
+#### Refeições:
+
+  - Cadastro e sugestão de pratos favoritos.
+  - Importação de informações de alimentos via código de barras.
+  - Recomendados com base nas preferências do usuário.
+  - Configurações: Ajuste de macronutrientes e plano alimentar.
+
+### 7. Relatórios
+
+Gráficos e estatísticas sobre progresso alimentar e corporal.
+
+  - Histórico alimentar: Comparativo entre consumo e metas.
+  - Evolução do peso: Tendência de ganho/perda de peso ao longo do tempo.
+  - Análise de nutrientes: Deficiências e excessos na dieta.
+
+### 8. Institucional
+
+  - Home Page: Apresentação da plataforma e funcionalidades.
+  - Blog: Artigos sobre nutrição e saúde.
+
+###  9. Landing Pages
+
+#### Calculadora Nutricional:
+
+  - IMC (Indice de Massa Corporal): Cálculo e classificação.
+  - GCD (Gasto Calórico Diário): Estimativa baseada no nível de atividade.
+  - TMB (Taxa Metabólica Basal): Cálculo de consumo calórico basal.
